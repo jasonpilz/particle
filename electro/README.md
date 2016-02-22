@@ -1,3 +1,3 @@
 # Electro
 
-![Fritzing](./electro_fritzing.png)
+![Fritzing](./electro.png)
