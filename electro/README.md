@@ -29,7 +29,7 @@ particle variable get <photon-name> voltage
 ![Fritzing](./electro.png)
 
 ## Firmware
-The photon analog input pins can take an input voltage of between 0 and 3.3 volts, divided between 4096 segments. In order to reduce the input voltage to prevent damaging the photon, a voltage divider circuit is used. Depending on the resistor values used, the maximum safe input voltage in calculated.
+The photon analog input pins can take an input voltage of between 0 and 3.3 volts, and are 12bits giving a 4096 resolution. In order to reduce the input voltage to prevent damaging the photon, a voltage divider circuit is used. Depending on the resistor values used, the maximum safe input voltage in calculated.
 
 * `vPin` variable can be changed to correspond to using photon inputs A0-A5.
 * `vPow` variable can be adjusted based on individual photon reference voltage.
