@@ -32,12 +32,6 @@ void loop() {
 
 int ledToggle(String command) {
 
-  // NOTES:
-  // VIN = 4.68 V
-  // Led FV = 1.61 V
-  // Led I  = 0.015 amp
-  // Rdrop = 3.07 V
-
   if (command=="on") {
     digitalWrite(ledPin, HIGH);
     return 1;
