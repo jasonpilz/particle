@@ -6,14 +6,14 @@ void setup()
   pinMode(channelOne, OUTPUT);
   pinMode(channelTwo, OUTPUT);
 
-  Particle.function("relay1", channelOne);
-  Particle.function("relay2", channelTwo);
+  Particle.function("relay1", relay1Toggle);
+  Particle.function("relay2", relay2Toggle);
 
   digitalWrite(channelOne, HIGH);
   digitalWrite(channelTwo, HIGH);
 }
 
-int channelOne(String command) {
+int relay1Toggle(String command) {
   if (command=="on") {
     digitalWrite(channelOne, LOW);
     return 1;
@@ -22,10 +22,12 @@ int channelOne(String command) {
     digitalWrite(channelOne, HIGH);
     return 0;
   }
-  else { return -1; }
+  else {
+    return -1;
+  }
 }
 
-int channelTwo(String command) {
+int relay2Toggle(String command) {
   if (command=="on") {
     digitalWrite(channelTwo, LOW);
     return 1;
@@ -34,5 +36,7 @@ int channelTwo(String command) {
     digitalWrite(channelTwo, HIGH);
     return 0;
   }
-  else { return -1; }
+  else {
+    return -1;
+  }
 }
