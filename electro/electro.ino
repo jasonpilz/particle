@@ -1,3 +1,5 @@
+#include <math.h>
+
 int vPin    = A5;
 double vPow = 3.33;
 double r1   = 82000;
@@ -20,7 +22,8 @@ void loop() {
   // Convert from voltage divider circuit
   double v2 = v / (r2 / (r1 + r2));
 
-  voltageValue = v2;
+  // Round voltage reading to 3 decimal places
+  voltageValue = ((int)(v2 * 10000)) / 10000;
 
   delay(5000);
 }

@@ -30,7 +30,8 @@ void loop() {
   // Convert from voltage divider circuit
   double v2 = v / (r2 / (r1 + r2));
 
-  voltageValue = v2;
+  // Round value to 3 decimal places
+  voltageValue = ((int)(v2 * 10000)) / 10000;
 
   delay(5000);
 }
