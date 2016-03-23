@@ -21,7 +21,9 @@ void setup()
   digitalWrite(channelOne, HIGH);
   digitalWrite(channelTwo, HIGH);
 
-  maxInput = (vPow / (r2 / (r1 + r2)));
+  // maxInput = (vPow / (r2 / (r1 + r2)));
+  // Round value to 3 decimal places
+  maxInput = ((int)((vPow / (r2 / (r1 + r2))) * 10000)) / 10000.0;
 }
 
 void loop() {
