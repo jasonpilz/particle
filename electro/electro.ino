@@ -8,7 +8,7 @@ double voltageValue = 0;
 double maxInput = 0;
 
 void setup() {
-  pinMode(vPin,INPUT);
+  pinMode(vPin, INPUT);
 
   Particle.variable("voltage", voltageValue);
   Particle.variable("maxvoltage", maxInput);
